@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form_Predefined</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+<!--     Thisisacommentline -->
+    <p>1.This is question?</p>
+    <p>A.Ans</p>
+    <p>B.No Ans</p>
+    <p>C.No Ans</p>
+
+    <input id="one" placeholder="Enter A or B or C ">
+    <p id="ans1p">-----</p>
+    <button onclick="one()">Submit</button>
+
+    <p>2.This is question?</p>
+    <p>A.No Ans</p>
+    <p>B.Ans</p>
+    <p>C.No Ans</p>
+
+    <input id="two" placeholder="Enter A or B or C ">
+    <p id="ans2p">-----</p>
+    <button onclick="two()">Submit</button>
+   
+    <br>
+    <br>
+    <button onclick="result()">Result</button>
+    <p id="res">Result</p>
+    <script>
+        var total = 0;
+        function one(){
+            var ans1 = document.getElementById("one").value;
+            if(ans1 == "A" || ans1 == "a"){
+                document.getElementById("ans1p").innerHTML = "Correct";
+                total = total + 1;
+            }
+            else{
+                document.getElementById("ans1p").innerHTML = "Wrong";
+            }
+        }
+
+        function two(){
+            var ans2 = document.getElementById("two").value;
+            if(ans2 == "B" || ans2 == "b"){
+                document.getElementById("ans2p").innerHTML = "Correct";
+                total = total + 1;
+            }
+            else{
+                document.getElementById("ans2p").innerHTML = "Wrong";
+            }
+        }
+
+        function result(){
+        document.getElementById("res").innerHTML = total;
+        }
+    </script>
+</body>
+</html>
